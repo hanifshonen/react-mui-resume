@@ -30,7 +30,7 @@ export default function ResumePortfolio({ profile }) {
                     {/* Profile */}
                     <ResumeCard>
                         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                            <Avatar alt={profile.name} src={profile.avatar} sx={{ width: 100, height: 100 }} />
+                            <Avatar alt={profile.name} src={profile.avatar} sx={{ width: 100, height: "auto" }} />
                             <Typography variant="h5" component="div" sx={{ mt: 2 }}>
                                 {profile.name}
                             </Typography>

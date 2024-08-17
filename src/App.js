@@ -35,38 +35,38 @@ export default function App({ data }) {
         setActiveTab(newValue);
     };
 
-    const updateFavicon = (tabIndex) => {
-        const link = document.querySelector("link[rel*='icon']") || document.createElement('link');
-        link.type = 'image/x-icon';
-        link.rel = 'shortcut icon';
+    // const updateFavicon = (tabIndex) => {
+    //     const link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+    //     link.type = 'image/x-icon';
+    //     link.rel = 'shortcut icon';
 
-        // Set the favicon based on tabIndex
-        switch (tabIndex) {
-            case 0:
-                link.href = `${data.profile.avatar}`;
-                document.title = `${data.profile.name}`
-                break;
-            case 1:
-                link.href = `${data.profile.avatar}`;
-                document.title = `${data.profile.name}`
-                break;
-            case 2:
-                link.href = `${data.profile.avatar}`;
-                document.title = `${data.profile.name}`
-                break;
-            default:
-                link.href = `${data.profile.avatar}`;
-                document.title = `${data.profile.name}`
-                break;
-        }
+    //     // Set the favicon based on tabIndex
+    //     switch (tabIndex) {
+    //         case 0:
+    //             link.href = `${data.profile.avatar}`;
+    //             document.title = `${data.profile.name}`
+    //             break;
+    //         case 1:
+    //             link.href = `${data.profile.avatar}`;
+    //             document.title = `${data.profile.name}`
+    //             break;
+    //         case 2:
+    //             link.href = `${data.profile.avatar}`;
+    //             document.title = `${data.profile.name}`
+    //             break;
+    //         default:
+    //             link.href = `${data.profile.avatar}`;
+    //             document.title = `${data.profile.name}`
+    //             break;
+    //     }
 
-        document.getElementsByTagName('head')[0].appendChild(link);
-    };
+    //     document.getElementsByTagName('head')[0].appendChild(link);
+    // };
 
-    React.useEffect(() => {
-        updateFavicon(activeTab); // Update favicon on initial load and on activeTab state change
-        // eslint-disable-next-line
-    }, [activeTab]);
+    // React.useEffect(() => {
+    //     updateFavicon(activeTab); // Update favicon on initial load and on activeTab state change
+    //     // eslint-disable-next-line
+    // }, [activeTab]);
 
 
     return (
